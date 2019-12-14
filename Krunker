@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name                Cruncher - Ruzics
-// @namespace           http://overhax.ml
+// @namespace           
 // @author              Ruzics
-// @description         Based on wheelchair :)
+// @description         Based on Cruncher
 // @version             v3.7
-// @supportURL          http://overhax.ml/krunkerPlus
+// @supportURL          ...
 // @icon                https://www.google.com/s2/favicons?domain=krunker.io
 // @require             
 // @require             
@@ -17,16 +17,16 @@
 alert("INJECTED CRUNCHER+")
 //Hub change
 document.title = "Chruncher+";
-document.getElementById("instructions").style.color = "Red";
+document.getElementById("instructions").style.color = "Blue";
 document.getElementById('instructions').innerHTML = 'Loading Chruncher+ / By Ruzics';
 document.getElementById('modVote').innerHTML = 'Chruncher+';
-document.getElementById("modVote").style.color = "Green";
+document.getElementById("modVote").style.color = "Blue";
 document.getElementById("texts3DHolder").innerHTML = '';
 // Adblock
 document.getElementById("krunkerio_728x90_1").remove();
 // more shit
-document.getElementById("subLogoButtons").innerHTML = '<div class="button small buttonP" id="menuBtnHost" onmouseenter="playTick()" onclick="openHostWindow()">Host Game</div><div class="button small buttonR" id="menuBtnBrowser" onmouseenter="playTick()" onclick="showWindow(2)">Server Browser</div><div id="inviteButton" class="button small" onmouseenter="playTick()" onclick="copyInviteLink()">Invite</div><div class="button small" id="menuBtnJoin" onmouseenter="playTick()" onclick="showWindow(24)">Join</div><div class="button small buttonP" id="hackMenu" onmouseenter="playTick()" onclick="window.open(\'http://overhax.ml\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">Get MORE HACKS HERE</div></div>';
-document.getElementById("aContainer").innerHTML = '<div class="menuDebugInfo" id="AdBox" onmouseenter="playTick()" onclick="window.open(\'http://overhax.ml\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">KRUNKERPLUS REWORKED overhax.ml</div>';
+document.getElementById("subLogoButtons").innerHTML = '<div class="button small buttonP" id="menuBtnHost" onmouseenter="playTick()" onclick="openHostWindow()">Host Game</div><div class="button small buttonR" id="menuBtnBrowser" onmouseenter="playTick()" onclick="showWindow(2)">Server Browser</div><div id="inviteButton" class="button small" onmouseenter="playTick()" onclick="copyInviteLink()">Invite</div><div class="button small" id="menuBtnJoin" onmouseenter="playTick()" onclick="showWindow(24)">Join</div><div class="button small buttonP" id="hackMenu" onmouseenter="playTick()" onclick="window.open(\'https://www.youtube.com/channel/UCvKzN88hyVdhG1vZ5W39ucA?view_as=subscriber\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">Subscribe</div></div>';
+document.getElementById("aContainer").innerHTML = '<div class="menuDebugInfo" id="AdBox" onmouseenter="playTick()" onclick="window.open(\'http://overhax.ml\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">Anti-VoteKick/Ban</div>';
 document.getElementById("AdBox").style.color = "white";
 // Font size
 document.getElementById("AdBox").style.fontSize = "larger";
@@ -39,8 +39,8 @@ document.body.appendChild(d);
 // Background
 //document.getElementById("instructionHolder").style.backgroundImage = "url('https://i.pinimg.com/originals/8a/ce/a9/8acea9261c892e75b0651de1d4f4e0e1.jpg')";
 // Chat messege
-document.getElementById('voiceDisplay').innerHTML = '<div class="menuDebugInfo" id="zaresplusisaskidd"><span style="color:#DAE110">Working on 1.9.2<span class="chatMsg">| OVERHAX KRUNKERPLUS REWORKED <span class="chatMsg"><span style="color:#F18938"> | OVERHAX.ML</span></span></span><i id="voiceIcon" class="material-icons" style="color:#fff;font-size:40px">mic</i> <div id="recTimer">[V]</div></div></div></div>';
-//document.getElementById('chatList').innerHTML = '<div class="chatItem"><span style="color:#DAE110">Working on 1.9.2<span class="chatMsg">| OVERHAX KRUNKERPLUS REWORKED <span class="chatMsg"><span style="color:#F18938"> | OVERHAX.ML</span></span></span></div>';
+document.getElementById('voiceDisplay').innerHTML = '<div class="menuDebugInfo" id="zaresplusisaskidd"><span style="color:#DAE110">Working on 1.9.2<span class="chatMsg">| Cruncher+ <span class="chatMsg"><span style="color:#F18938"> | By Ruzics</span></span></span><i id="voiceIcon" class="material-icons" style="color:#fff;font-size:40px">mic</i> <div id="recTimer">[V]</div></div></div></div>';
+//document.getElementById('chatList').innerHTML = '<div class="chatItem"><span style="color:#DAE110">Working on 1.9.2<span class="chatMsg">|  <span class="chatMsg"><span style="color:#F18938"> | OVERHAX.ML</span></span></span></div>';
 //Fps counter
 javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()
 //Full screen
@@ -167,13 +167,13 @@ let render = function() {
     const canvas = document.getElementById('game-overlay');
     const ctx = canvas.getContext("2d");
     const consts = {
-        "cameraHeight": 0.9,
-        "playerHeight": 6,
-        "cameraHeight": 0.9,
+        "cameraHeight": 0.5,
+        "playerHeight": 9,
+        "cameraHeight": 0.5,
         "headScale": 1,
         "crouchDst": 3,
-        "camChaseTrn": 1.0022,
-        "camChaseSpd": 1.0012,
+        "camChaseTrn": 10.0022,
+        "camChaseSpd": 10.0012,
         "camChaseSen": 0.2,
         "camChaseDst": 24,
         "recoilMlt": 0.1,
@@ -260,7 +260,7 @@ let render = function() {
         if (!defined(controls) || target === null || (target.x + target.y + target.z2) == 0) return void(controls.target = null);
         let offset1 = ((consts.playerHeight - consts.cameraHeight) - (target.crouchVal * consts.crouchDst));
         let offset2 = consts.playerHeight - consts.headScale / 2 - target.crouchVal * consts.crouchDst;
-        let recoil = (get(me, "recoilAnimY") * consts.recoilMlt) * 25;
+        let recoil = (get(me, "recoilAnimY") * consts.recoilMlt) * 0.1;
         let xdir = getXDir(controls.object.position.x, controls.object.position.y, controls.object.position.z, target.x, (target.y + offset1) - recoil, target.z);
         let ydir = getDirection(controls.object.position.z, controls.object.position.x, target.z, target.x);
         controls.target = {
@@ -349,7 +349,7 @@ let render = function() {
         return String(chars.substr((n >> 4) & 0x0F,1)) + chars.substr(n & 0x0F,1);
     }
 
-    let rgba2hex = (r,g,b,a = 255) => ("#").concat(byte2Hex(r),byte2Hex(g),byte2Hex(b),byte2Hex(a));
+    let rgba2hex = (r,g,b,a = 100) => ("#").concat(byte2Hex(r),byte2Hex(g),byte2Hex(b),byte2Hex(a));
 
     //ONTICK STUFF
 
@@ -386,7 +386,7 @@ let render = function() {
         if (defined(entity[objInstances])) {
 /*
             let isFriendly = get(entity, 'isFriendly');
-            let teamCol = isFriendly ? '#44AAFF' : '#FF4444';
+            let teamCol = isFriendly ? '#00AB00' : '#00AB00';
 
             let entityPos = entity[objInstances].position;
             if (renderer.frustum.containsPoint(entityPos)) {
@@ -414,7 +414,7 @@ let render = function() {
                             material.fog = false;
                             material.emissive.r = 1;
                             material.colorWrite = true;
-                            material.transparent = true;
+                            material.transparent = true
                             material.opacity = 1.0;
                             //material.needsUpdate = true;
                             //material.wireframe = !canHit(entity);
