@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name                Cruncher - Ruzics
-// @namespace           
+// @namespace           http://overhax.ml
 // @author              Ruzics
-// @description         Based on Cruncher
+// @description         Based on wheelchair :)
 // @version             v3.7
-// @supportURL          ...
+// @supportURL          http://overhax.ml/krunkerPlus
 // @icon                https://www.google.com/s2/favicons?domain=krunker.io
 // @require             
 // @require             
@@ -14,7 +14,7 @@
 // ==/UserScript==
 // Custom hub
 //Tells u if hack is working.
-alert("INJECTED CRUNCHER+")
+alert("Injection Complete")
 //Hub change
 document.title = "Chruncher+";
 document.getElementById("instructions").style.color = "Blue";
@@ -167,9 +167,9 @@ let render = function() {
     const canvas = document.getElementById('game-overlay');
     const ctx = canvas.getContext("2d");
     const consts = {
-        "cameraHeight": 0.5,
-        "playerHeight": 9,
-        "cameraHeight": 0.5,
+        "cameraHeight": 0.1,
+        "playerHeight": 1,
+        "cameraHeight": 0.1,
         "headScale": 1,
         "crouchDst": 3,
         "camChaseTrn": 10.0022,
